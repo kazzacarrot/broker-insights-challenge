@@ -18,12 +18,12 @@ export class PolicyService {
   getPolicies(): Observable<Policy[]>{
     return this.http.get<Policy[]>(this.policiesURL).pipe(
         pluck("objects"),
-        map(function(policies:Policy[]){
-            var reformattedArray = policies.map(obj =>{ 
-               var rObj = {};
+        map(function(policies:any[]){
+            var reformattedArray:Policy[] = policies.map(obj =>{ 
+               var rObj:Policy = new Policy();
                rObj.customer_name = obj.customer.name;
                rObj.customer_address = obj.customer.address;
-               rObj.insurer = obj.insurer.name;
+               rObj.insurer_name = obj.insurer.name;
                rObj.premium = obj.premium;
                rObj.policy_type = obj.policy_type;
                return rObj;
