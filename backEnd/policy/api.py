@@ -16,7 +16,7 @@ class CustomerResource(ModelResource):
         include_resource_uri = False
 
 class PolicyResource(ModelResource):
-    Insurer = ForeignKey(InsurerResource, "insurer", full=True)
+    insurer = ForeignKey(InsurerResource, "insurer", full=True)
     customer = ForeignKey(CustomerResource, "customer", full=True)
     policy_type = CharField(attribute="policy_type__name", null=True)
 
