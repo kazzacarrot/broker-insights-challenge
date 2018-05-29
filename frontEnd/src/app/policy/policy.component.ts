@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PolicyComponent implements OnInit {
   @Input() policy_obj;
-  expanded:boolean = true;
+  expanded:boolean = false;
 
   constructor() { }
 
