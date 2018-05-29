@@ -3,15 +3,6 @@ import { Component, OnInit, Input } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
 
-export class Policy {
-  id: number;
-  customer_name: string;
-  customer_address: string;
-  premium: number;
-  insurer_name: string;
-  policy_type: string;
-}
-
 
 @Component({
   selector: 'app-root',

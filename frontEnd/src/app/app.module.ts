@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { PolicyComponent } from './policy/policy.component';
+import { PoliciesComponent } from './policies/policies.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PolicyComponent
+    PolicyComponent,
+    PoliciesComponent
   ],
   imports: [
     BrowserModule,
