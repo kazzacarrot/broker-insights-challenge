@@ -1,0 +1,15 @@
+.panel{
+    border: 1px solid grey;
+    border-radius: 10px;
+    min-width: 400px;
+    width: 30%;
+    margin: 10px;
+}
+
+.panel-header{
+    margin-left: 5px;
+}
+
+.panel-body{
+    margin-left: 20px;
+}
