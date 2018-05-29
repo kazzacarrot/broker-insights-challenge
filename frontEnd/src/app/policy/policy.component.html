@@ -1,5 +1,10 @@
-<div class="container">
+<div (click)="toggleExpand()" class="container">
     <div class="row">
-        <p>{{policy_obj.customer_name}}</p>
+        <p>{{policy_obj.customer_name}} / {{policy_obj.insurer_name}}</p>
+        <div *ngIf="expanded" class="row">
+            <p>{{policy_obj.premium }}</p>
+            <p>{{policy_obj.policy_type }}</p>
+            <p>{{policy_obj.customer_address }}</p>
+        </div>
     </div>
 </div>
