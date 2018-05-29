@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { POLICIES } from '../mock-policies';
+import { PolicyService } from '../policy.service';
 
 @Component({
   selector: 'app-policies',
@@ -7,10 +7,16 @@ import { POLICIES } from '../mock-policies';
   styleUrls: ['./policies.component.css']
 })
 export class PoliciesComponent implements OnInit {
-  policies = POLICIES;
-  constructor() { }
+  policies: Policy;
+  constructor(private policyService: PolicyService) { }
 
   ngOnInit() {
+    this.getPolicies();
+  }
+
+  getPolicies():void {
+    this.policyService.getPolicies()
+      .subscribe(policies => this.policies = policies);
   }
 
 }
