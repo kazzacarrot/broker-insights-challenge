@@ -18,7 +18,7 @@ export class PolicyService {
   getPolicies(): Observable<Policy[]>{
     return this.http.get<Policy[]>(this.policiesURL).pipe(
         pluck("objects"),
-        map(function(policies){
+        map(function(policies:Policy[]){
             var reformattedArray = policies.map(obj =>{ 
                var rObj = {};
                rObj.customer_name = obj.customer.name;
