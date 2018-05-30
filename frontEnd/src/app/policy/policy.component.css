@@ -9,7 +9,9 @@
 .panel-header{
     margin-left: 5px;
 }
-
+.panel-header p{
+    font-size: 110%;
+}
 .panel-body{
     margin-left: 20px;
 }
